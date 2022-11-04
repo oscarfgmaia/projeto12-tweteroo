@@ -87,7 +87,8 @@ const tweets = [
     avatar:
       "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
     tweet: "10",
-  },  {
+  },
+  {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
@@ -111,7 +112,11 @@ app.post("/sign-up", (req, res) => {
     username,
     avatar,
   };
-  if (users.find((obj) => obj.username === username)) {
+  if (
+    users.find(
+      (obj) => obj.username.toLocaleLowerCase() === username.toLocaleLowerCase()
+    )
+  ) {
     res.status(409).send("Usuário já cadastrado!");
     return;
   }
@@ -129,7 +134,7 @@ app.post("/tweets", (req, res) => {
     res.status(400).send("Todos os campos são obrigatórios");
     return;
   }
-  const user = users.find((obj) => obj.username === username);
+  const user = users.find((obj) => obj.username.toLocaleLowerCase() === username.toLocaleLowerCase());
   if (!user) {
     res.status(404).send("Usuário inválido");
     return;
@@ -145,12 +150,11 @@ app.post("/tweets", (req, res) => {
 
 app.get("/tweets", (req, res) => {
   const lastTenTweets = [];
-  for(let i = tweets.length-1;i>(tweets.length-1)-10;i--){
-    if(i<0){
-      break
+  for (let i = tweets.length - 1; i > tweets.length - 1 - 10; i--) {
+    if (i < 0) {
+      break;
     }
-    lastTenTweets.push(tweets[i])
+    lastTenTweets.push(tweets[i]);
   }
-  console.log(lastTenTweets.length)
-  res.send(lastTenTweets)
+  res.send(lastTenTweets);
 });
