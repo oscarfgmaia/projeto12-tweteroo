@@ -11,6 +11,16 @@ const users = [
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
   },
   {
+    username: "sanji",
+    avatar:
+      "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+  },
+  {
+    username: "zoro",
+    avatar:
+      "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
+  },
+  {
     username: "nami",
     avatar:
       "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
@@ -32,19 +42,31 @@ const tweets = [
     username: "luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-    tweet: "1",
+    tweet: "Eu vou ser o rei dos piratas!",
   },
   {
     username: "nami",
     avatar:
       "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
-    tweet: "2",
+    tweet: "Odeio quando não pagam o que me deve!",
+  },
+  {
+    username: "shanks",
+    avatar:
+    "https://criticalhits.com.br/wp-content/uploads/2022/07/Shanks-910x455.jpg",
+    tweet: "...",
   },
   {
     username: "luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-    tweet: "3",
+    tweet: "Sanjiiiii quero carne!!!!",
+  },
+  {
+    username: "sanji",
+    avatar:
+      "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+    tweet:"Só depois que eu terminar a sobremesa das meninas!"
   },
 ];
 
@@ -57,7 +79,6 @@ app.post("/sign-up", (req, res) => {
   const actualUser = {
     username,
     avatar,
-
   };
   if (
     users.find(
@@ -108,25 +129,23 @@ app.get("/tweets", (req, res) => {
   res.send(lastTenTweets);
 });
 
-
 //todo when discover about pages
 app.get("/tweets/:USERNAME", (req, res) => {
+  const username = req.params.USERNAME.toLocaleLowerCase();
 
-  const username = req.params.USERNAME.toLocaleLowerCase()
-
-  if(!users.find(obj=>obj.username===username)){
-    res.status(404).send("Usuário não cadastrado!")
-    return
+  if (!users.find((obj) => obj.username === username)) {
+    res.status(404).send("Usuário não cadastrado!");
+    return;
   }
 
-  const tweetsByUser = tweets.filter((obj)=>{
-    if(obj.username === username){
-      return true
+  const tweetsByUser = tweets.filter((obj) => {
+    if (obj.username === username) {
+      return true;
     }
-  })
-  if(tweetsByUser.length === 0){
-    res.status(404).send("Não há tweets para esse usuário")
-    return
+  });
+  if (tweetsByUser.length === 0) {
+    res.status(404).send("Não há tweets para esse usuário");
+    return;
   }
-  res.send(tweetsByUser)
+  res.send(tweetsByUser);
 });
