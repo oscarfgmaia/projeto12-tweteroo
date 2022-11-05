@@ -49,64 +49,349 @@ const users = [
     avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
   },
 ];
-
+let c=1
 const tweets = [
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-    tweet: "Eu vou ser o rei dos piratas!",
+    tweet: `${c++}`,
   },
   {
     username: "Nami",
     avatar:
       "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
-    tweet: "Odeio quando não pagam o que me deve!",
-  },
+      tweet: `${c++}`,
+    },
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-    tweet: "Sanjiiiii quero carne!!!!",
-  },
+      tweet: `${c++}`
+    },
   {
     username: "Usopp",
     avatar:
       "https://i.pinimg.com/736x/51/80/9d/51809d19d36ea87335edde7f74e982ae.jpg",
-    tweet:"Eu não erro nenhum tiro!"
-  },
+      tweet: `${c++}`
+    },
   {
     username: "Sanji",
     avatar:
     "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
-    tweet: "Só depois que eu terminar a sobremesa das meninas!",
+    tweet: `${c++}`
   },
   {
     username: "Zoro",
     avatar:
       "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
-      tweet:"Cala a boca seu cozinheiro de terceira"
+      tweet: `${c++}`
   },
   {
     username: "Chopper",
     avatar:
       "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
-      tweet:"Eu não fiquei nenhum pouco feliz com isso!! Seu idiota!!"
+      tweet: `${c++}`
   },
   {
     username:"Franky",
     avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
-    tweet:"SUUUPEEEEER!!!!"
+    tweet: `${c++}`
   },
   {
     username:"Brook",
     avatar:"https://criticalhits.com.br/?attachment_id=208749",
-    tweet:"Posso ver sua calcinha? :3"
+    tweet: `${c++}`
   },
   {
     username:"Robin",
     avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
-    tweet:"hahahaha"
+    tweet: `${c++}`
+  },
+  {
+    username: "Luffy",
+    avatar:
+      "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
+    tweet: `${c++}`,
+  },
+  {
+    username: "Nami",
+    avatar:
+      "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
+      tweet: `${c++}`,
+    },
+  {
+    username: "Luffy",
+    avatar:
+      "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
+      tweet: `${c++}`
+    },
+  {
+    username: "Usopp",
+    avatar:
+      "https://i.pinimg.com/736x/51/80/9d/51809d19d36ea87335edde7f74e982ae.jpg",
+      tweet: `${c++}`
+    },
+  {
+    username: "Sanji",
+    avatar:
+    "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username: "Zoro",
+    avatar:
+      "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
+      tweet: `${c++}`
+  },
+  {
+    username: "Chopper",
+    avatar:
+      "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
+      tweet: `${c++}`
+  },
+  {
+    username:"Franky",
+    avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username:"Brook",
+    avatar:"https://criticalhits.com.br/?attachment_id=208749",
+    tweet: `${c++}`
+  },
+  {
+    username:"Robin",
+    avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username: "Luffy",
+    avatar:
+      "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
+    tweet: `${c++}`,
+  },
+  {
+    username: "Nami",
+    avatar:
+      "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
+      tweet: `${c++}`,
+    },
+  {
+    username: "Luffy",
+    avatar:
+      "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
+      tweet: `${c++}`
+    },
+  {
+    username: "Usopp",
+    avatar:
+      "https://i.pinimg.com/736x/51/80/9d/51809d19d36ea87335edde7f74e982ae.jpg",
+      tweet: `${c++}`
+    },
+  {
+    username: "Sanji",
+    avatar:
+    "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username: "Zoro",
+    avatar:
+      "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
+      tweet: `${c++}`
+  },
+  {
+    username: "Chopper",
+    avatar:
+      "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
+      tweet: `${c++}`
+  },
+  {
+    username:"Franky",
+    avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username:"Brook",
+    avatar:"https://criticalhits.com.br/?attachment_id=208749",
+    tweet: `${c++}`
+  },
+  {
+    username:"Robin",
+    avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username: "Luffy",
+    avatar:
+      "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
+    tweet: `${c++}`,
+  },
+  {
+    username: "Nami",
+    avatar:
+      "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
+      tweet: `${c++}`,
+    },
+  {
+    username: "Luffy",
+    avatar:
+      "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
+      tweet: `${c++}`
+    },
+  {
+    username: "Usopp",
+    avatar:
+      "https://i.pinimg.com/736x/51/80/9d/51809d19d36ea87335edde7f74e982ae.jpg",
+      tweet: `${c++}`
+    },
+  {
+    username: "Sanji",
+    avatar:
+    "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username: "Zoro",
+    avatar:
+      "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
+      tweet: `${c++}`
+  },
+  {
+    username: "Chopper",
+    avatar:
+      "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
+      tweet: `${c++}`
+  },
+  {
+    username:"Franky",
+    avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username:"Brook",
+    avatar:"https://criticalhits.com.br/?attachment_id=208749",
+    tweet: `${c++}`
+  },
+  {
+    username:"Robin",
+    avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username: "Luffy",
+    avatar:
+      "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
+    tweet: `${c++}`,
+  },
+  {
+    username: "Nami",
+    avatar:
+      "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
+      tweet: `${c++}`,
+    },
+  {
+    username: "Luffy",
+    avatar:
+      "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
+      tweet: `${c++}`
+    },
+  {
+    username: "Usopp",
+    avatar:
+      "https://i.pinimg.com/736x/51/80/9d/51809d19d36ea87335edde7f74e982ae.jpg",
+      tweet: `${c++}`
+    },
+  {
+    username: "Sanji",
+    avatar:
+    "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username: "Zoro",
+    avatar:
+      "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
+      tweet: `${c++}`
+  },
+  {
+    username: "Chopper",
+    avatar:
+      "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
+      tweet: `${c++}`
+  },
+  {
+    username:"Franky",
+    avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username:"Brook",
+    avatar:"https://criticalhits.com.br/?attachment_id=208749",
+    tweet: `${c++}`
+  },
+  {
+    username:"Robin",
+    avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username: "Luffy",
+    avatar:
+      "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
+    tweet: `${c++}`,
+  },
+  {
+    username: "Nami",
+    avatar:
+      "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
+      tweet: `${c++}`,
+    },
+  {
+    username: "Luffy",
+    avatar:
+      "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
+      tweet: `${c++}`
+    },
+  {
+    username: "Usopp",
+    avatar:
+      "https://i.pinimg.com/736x/51/80/9d/51809d19d36ea87335edde7f74e982ae.jpg",
+      tweet: `${c++}`
+    },
+  {
+    username: "Sanji",
+    avatar:
+    "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username: "Zoro",
+    avatar:
+      "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
+      tweet: `${c++}`
+  },
+  {
+    username: "Chopper",
+    avatar:
+      "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
+      tweet: `${c++}`
+  },
+  {
+    username:"Franky",
+    avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
+    tweet: `${c++}`
+  },
+  {
+    username:"Brook",
+    avatar:"https://criticalhits.com.br/?attachment_id=208749",
+    tweet: `${c++}`
+  },
+  {
+    username:"Robin",
+    avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
+    tweet: `${c++}`
   },
 ];
 
@@ -163,19 +448,23 @@ app.post("/tweets", (req, res) => {
   res.status(201).send("OK");
 });
 
+
+//todo fix pages - arrays must ignore past 10
 app.get("/tweets", (req, res) => {
+  const {page} = req.query;
+  console.log(page)
+
   const lastTenTweets = [];
-  for (let i = tweets.length - 1; i > tweets.length - 1 - 10; i--) {
+  for (let i = tweets.length - 1; i > (tweets.length - 1)-page*10; i--) {
     if (i < 0) {
       break;
     }
     lastTenTweets.push(tweets[i]);
-
   }
+
   res.send(lastTenTweets);
 });
 
-//todo when discover about pages
 app.get("/tweets/:USERNAME", (req, res) => {
   const username = req.params.USERNAME.toLocaleLowerCase();
 
