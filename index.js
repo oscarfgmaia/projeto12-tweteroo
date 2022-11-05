@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -37,361 +36,375 @@ const users = [
       "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
   },
   {
-    username:"Franky",
-    avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg"
+    username: "Franky",
+    avatar:
+      "https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
   },
   {
-    username:"Brook",
-    avatar:"https://criticalhits.com.br/?attachment_id=208749",
+    username: "Brook",
+    avatar: "https://criticalhits.com.br/?attachment_id=208749",
   },
   {
-    username:"Robin",
-    avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
+    username: "Robin",
+    avatar:
+      "https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
   },
 ];
-let c=1
+let c = 1;
 const tweets = [
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-    tweet: `${c++}`,
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Nami",
     avatar:
       "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
-      tweet: `${c++}`,
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-      tweet: `${c++}`
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Usopp",
     avatar:
       "https://i.pinimg.com/736x/51/80/9d/51809d19d36ea87335edde7f74e982ae.jpg",
-      tweet: `${c++}`
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Sanji",
     avatar:
-    "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
-    tweet: `${c++}`
+      "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Zoro",
     avatar:
       "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
-      tweet: `${c++}`
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Chopper",
     avatar:
       "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
-      tweet: `${c++}`
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Franky",
-    avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
-    tweet: `${c++}`
+    username: "Franky",
+    avatar:
+      "https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Brook",
-    avatar:"https://criticalhits.com.br/?attachment_id=208749",
-    tweet: `${c++}`
+    username: "Brook",
+    avatar: "https://criticalhits.com.br/?attachment_id=208749",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Robin",
-    avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
-    tweet: `${c++}`
+    username: "Robin",
+    avatar:
+      "https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-    tweet: `${c++}`,
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Nami",
     avatar:
       "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
-      tweet: `${c++}`,
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-      tweet: `${c++}`
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Usopp",
     avatar:
       "https://i.pinimg.com/736x/51/80/9d/51809d19d36ea87335edde7f74e982ae.jpg",
-      tweet: `${c++}`
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Sanji",
     avatar:
-    "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
-    tweet: `${c++}`
+      "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Zoro",
     avatar:
       "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
-      tweet: `${c++}`
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Chopper",
     avatar:
       "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
-      tweet: `${c++}`
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Franky",
-    avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
-    tweet: `${c++}`
+    username: "Franky",
+    avatar:
+      "https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Brook",
-    avatar:"https://criticalhits.com.br/?attachment_id=208749",
-    tweet: `${c++}`
+    username: "Brook",
+    avatar: "https://criticalhits.com.br/?attachment_id=208749",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Robin",
-    avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
-    tweet: `${c++}`
+    username: "Robin",
+    avatar:
+      "https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-    tweet: `${c++}`,
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Nami",
     avatar:
       "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
-      tweet: `${c++}`,
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-      tweet: `${c++}`
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Usopp",
     avatar:
       "https://i.pinimg.com/736x/51/80/9d/51809d19d36ea87335edde7f74e982ae.jpg",
-      tweet: `${c++}`
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Sanji",
     avatar:
-    "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
-    tweet: `${c++}`
+      "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Zoro",
     avatar:
       "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
-      tweet: `${c++}`
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Chopper",
     avatar:
       "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
-      tweet: `${c++}`
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Franky",
-    avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
-    tweet: `${c++}`
+    username: "Franky",
+    avatar:
+      "https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Brook",
-    avatar:"https://criticalhits.com.br/?attachment_id=208749",
-    tweet: `${c++}`
+    username: "Brook",
+    avatar: "https://criticalhits.com.br/?attachment_id=208749",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Robin",
-    avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
-    tweet: `${c++}`
+    username: "Robin",
+    avatar:
+      "https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-    tweet: `${c++}`,
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Nami",
     avatar:
       "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
-      tweet: `${c++}`,
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-      tweet: `${c++}`
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Usopp",
     avatar:
       "https://i.pinimg.com/736x/51/80/9d/51809d19d36ea87335edde7f74e982ae.jpg",
-      tweet: `${c++}`
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Sanji",
     avatar:
-    "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
-    tweet: `${c++}`
+      "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Zoro",
     avatar:
       "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
-      tweet: `${c++}`
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Chopper",
     avatar:
       "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
-      tweet: `${c++}`
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Franky",
-    avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
-    tweet: `${c++}`
+    username: "Franky",
+    avatar:
+      "https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Brook",
-    avatar:"https://criticalhits.com.br/?attachment_id=208749",
-    tweet: `${c++}`
+    username: "Brook",
+    avatar: "https://criticalhits.com.br/?attachment_id=208749",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Robin",
-    avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
-    tweet: `${c++}`
+    username: "Robin",
+    avatar:
+      "https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-    tweet: `${c++}`,
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Nami",
     avatar:
       "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
-      tweet: `${c++}`,
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-      tweet: `${c++}`
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Usopp",
     avatar:
       "https://i.pinimg.com/736x/51/80/9d/51809d19d36ea87335edde7f74e982ae.jpg",
-      tweet: `${c++}`
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Sanji",
     avatar:
-    "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
-    tweet: `${c++}`
+      "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Zoro",
     avatar:
       "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
-      tweet: `${c++}`
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Chopper",
     avatar:
       "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
-      tweet: `${c++}`
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Franky",
-    avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
-    tweet: `${c++}`
+    username: "Franky",
+    avatar:
+      "https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Brook",
-    avatar:"https://criticalhits.com.br/?attachment_id=208749",
-    tweet: `${c++}`
+    username: "Brook",
+    avatar: "https://criticalhits.com.br/?attachment_id=208749",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Robin",
-    avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
-    tweet: `${c++}`
+    username: "Robin",
+    avatar:
+      "https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-    tweet: `${c++}`,
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Nami",
     avatar:
       "https://animes.olanerd.com/wp-content/uploads/2022/09/1662502357_One-Piece-Nami-tem-Haki.jpg",
-      tweet: `${c++}`,
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Luffy",
     avatar:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-      tweet: `${c++}`
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Usopp",
     avatar:
       "https://i.pinimg.com/736x/51/80/9d/51809d19d36ea87335edde7f74e982ae.jpg",
-      tweet: `${c++}`
-    },
+    tweet: `Mensagem de número: ${c++}`,
+  },
   {
     username: "Sanji",
     avatar:
-    "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
-    tweet: `${c++}`
+      "https://criticalhits.com.br/wp-content/uploads/2021/10/DXSH4n_XUAAigjE-1-910x512.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Zoro",
     avatar:
       "https://ovicio.com.br/wp-content/uploads/2021/07/20210712-one-piece-zoro-wano-postcover-555x555.jpg",
-      tweet: `${c++}`
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
     username: "Chopper",
     avatar:
       "https://i.pinimg.com/originals/89/ff/79/89ff79195daf1da1b138b18d0cc63304.jpg",
-      tweet: `${c++}`
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Franky",
-    avatar:"https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
-    tweet: `${c++}`
+    username: "Franky",
+    avatar:
+      "https://i.pinimg.com/originals/62/81/74/628174766c32cf1c1afe53041cbf8bf5.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Brook",
-    avatar:"https://criticalhits.com.br/?attachment_id=208749",
-    tweet: `${c++}`
+    username: "Brook",
+    avatar: "https://criticalhits.com.br/?attachment_id=208749",
+    tweet: `Mensagem de número: ${c++}`,
   },
   {
-    username:"Robin",
-    avatar:"https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
-    tweet: `${c++}`
+    username: "Robin",
+    avatar:
+      "https://nerdhits.com.br/wp-content/uploads/2022/07/nico-robin-one-piece-1.jpg",
+    tweet: `Mensagem de número: ${c++}`,
   },
 ];
 
@@ -422,22 +435,22 @@ app.post("/sign-up", (req, res) => {
 });
 
 app.post("/tweets", (req, res) => {
-  const {tweet} = req.body;
-  const {user} = req.headers;
+  const { tweet } = req.body;
+  const { user } = req.headers;
 
   const userLoggedIn = users.find(
     (obj) => obj.username.toLocaleLowerCase() === user.toLocaleLowerCase()
   );
-  console.log(userLoggedIn)
+
   if (!userLoggedIn) {
     res.status(404).send("Usuário inválido");
     return;
   }
-  if(!userLoggedIn.username || !tweet){
+  if (!userLoggedIn.username || !tweet) {
     res.status(400).send("Todos os campos são obrigatórios");
     return;
   }
-  
+
   const newTweet = {
     username: userLoggedIn.username,
     avatar: userLoggedIn.avatar,
@@ -448,20 +461,33 @@ app.post("/tweets", (req, res) => {
   res.status(201).send("OK");
 });
 
-
-//todo fix pages - arrays must ignore past 10
-app.get("/tweets", (req, res) => {
-  const {page} = req.query;
-  console.log(page)
-
-  const lastTenTweets = [];
-  for (let i = tweets.length - 1; i > (tweets.length - 1)-page*10; i--) {
-    if (i < 0) {
-      break;
+function loadTenLastObjByPage(arr, page) {
+  const newArrWith10 = [];
+  let counter = 1;
+  if (Number(page) === 1) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+      if (counter > 10) {
+        break;
+      }
+      newArrWith10.push(arr[i]);
+      counter++;
     }
-    lastTenTweets.push(tweets[i]);
+  } else {
+    for (let i = arr.length - 1 - page * 10; i >= 0; i--) {
+      if (counter > 10) {
+        break;
+      }
+      newArrWith10.push(arr[i]);
+      counter++;
+    }
   }
+  console.log(newArrWith10);
+  return newArrWith10;
+}
 
+app.get("/tweets", (req, res) => {
+  const { page } = req.query;
+  const lastTenTweets = loadTenLastObjByPage(tweets, page);
   res.send(lastTenTweets);
 });
 
