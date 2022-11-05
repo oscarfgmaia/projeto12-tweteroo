@@ -481,7 +481,6 @@ function loadTenLastObjByPage(arr, page) {
       counter++;
     }
   }
-  console.log(newArrWith10);
   return newArrWith10;
 }
 
