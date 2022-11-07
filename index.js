@@ -15,10 +15,10 @@ app.listen(5000, () => {
 
 function isValidUrl(urlString) {
   try {
-    return Boolean(new URL(urlString))
+    return Boolean(new URL(urlString));
   }
   catch (e) {
-    return false
+    return false;
   }
 }
 app.post("/sign-up", (req, res) => {
@@ -29,8 +29,8 @@ app.post("/sign-up", (req, res) => {
   };
   const myUserRegex = /^[-._a-z0-9]+$/gi.exec(username)
   if( !myUserRegex ||username.length > 30){
-    res.status(422).send('Insira um usuário válido')
-    return
+    res.status(422).send('Insira um usuário válido');
+    return;
   }
   if (!isValidUrl(avatar)) {
     res.status(422).send("Insira uma URL válida");
@@ -59,7 +59,7 @@ app.post("/tweets", (req, res) => {
 
   if(tweet.length > 1000){
     res.status(422).send("Tamanho máximo de 1000 caracteres");
-    return
+    return;
   }
   const userLoggedIn = users.find(
     (obj) => obj.username.toLocaleLowerCase() === user.toLocaleLowerCase()
