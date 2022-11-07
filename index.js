@@ -426,7 +426,7 @@ app.post("/sign-up", (req, res) => {
     username,
     avatar,
   };
-  const myUserRegex = /^[-.@_a-z0-9]+$/gi.exec(username)
+  const myUserRegex = /^[-._a-z0-9]+$/gi.exec(username)
   if( !myUserRegex ||username.length > 30){
     res.status(422).send('Insira um usuário válido')
     return
