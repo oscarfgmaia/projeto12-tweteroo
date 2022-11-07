@@ -412,12 +412,30 @@ app.listen(5000, () => {
   console.log("Server started at port 5000...");
 });
 
+function isValidUrl(urlString) {
+  try {
+    return Boolean(new URL(urlString))
+  }
+  catch (e) {
+    return false
+  }
+}
 app.post("/sign-up", (req, res) => {
   const { username, avatar } = req.body;
   const actualUser = {
     username,
     avatar,
   };
+  const myUserRegex = /^[-.@_a-z0-9]+$/gi.exec(username)
+  if( !myUserRegex ||username.length > 30){
+    res.status(422).send('Insira um usuário válido')
+    return
+  }
+  if (!isValidUrl(avatar)) {
+    res.status(422).send("Insira uma URL válida");
+    return;
+  }
+
   if (
     users.find(
       (obj) => obj.username.toLocaleLowerCase() === username.toLocaleLowerCase()
@@ -438,6 +456,10 @@ app.post("/tweets", (req, res) => {
   const { tweet } = req.body;
   const { user } = req.headers;
 
+  if(tweet.length > 1000){
+    res.status(422).send("Tamanho máximo de 1000 caracteres");
+    return
+  }
   const userLoggedIn = users.find(
     (obj) => obj.username.toLocaleLowerCase() === user.toLocaleLowerCase()
   );
@@ -473,7 +495,7 @@ function loadTenLastObjByPage(arr, page) {
       counter++;
     }
   } else {
-    for (let i = arr.length - 1 - page * 10; i >= 0; i--) {
+    for (let i = arr.length - 1 - ((page - 1) * 10); i >= 0; i--) {
       if (counter > 10) {
         break;
       }
