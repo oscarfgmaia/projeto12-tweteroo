@@ -66,7 +66,7 @@ app.post("/tweets", (req, res) => {
   );
 
   if (!userLoggedIn) {
-    res.status(404).send("Usuário inválido");
+    res.status(404).send("Usuário não logado");
     return;
   }
   if (!userLoggedIn.username || !tweet) {
