@@ -1,1 +1,1 @@
-# projeto12-tweteroo
+# projeto12-tweteroo - with mocks for test purposes
